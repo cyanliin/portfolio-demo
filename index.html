@@ -5,15 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <style>
+        /* 整個網站 */
+        body {
+            background-color: black; /* 黑色背景 */
+            color: white; /* 白色文字 */
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        /* 上方自我介紹的部分 */
+        .header {
+        }
+        .header > .photo {
+            width: 100%;
+        }
+        .header > .content {
+            padding: 32px;
+        }
+        .header .photo2 {
+            display: none; /* 隱藏 */
+        }
+        /* 平板的大小以上，要套用的樣式 */
+        @media (min-width: 720px) {
+            .header {
+                display: flex; /* 讓小孩可以水平排列的設定 */
+            }
+            .header > .photo {
+                display: none; 
+                width: 50%; /* 隱藏 */
+            }
+            .header > .content {
+                width: 50%;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            .header .photo2 {
+                display: block;  /* 顯示 */
+                width: 50%; 
+            }
+        }
+    </style>
 </head>
 <body>
-    
     <div class="header">
-        <h1 class="name">Peter Lin</h1>
-        <div class="intro">
-            <p>I am an animation artist, and I specialize in bringing characters and stories to life through the power of animation. I have a passion for creating engaging, entertaining, and visually stunning animations that captivate audiences of all ages.</p>
-            <p>My skills in animation are backed by years of experience and education. I hold a degree in animation and have worked on a variety of projects, from short films and commercials to TV shows and feature films. I have expertise in traditional 2D animation as well as 3D animation and computer graphics.</p>
+        <img class="photo" src="photo.jpg"> <!-- 加入圖片-->
+        <div class="content"> <!-- 將內容包起來一起給內距 -->
+            <h1 class="name">Peter Lin</h1>
+            <div class="intro">
+                <p>I am an animation artist, and I specialize in bringing characters and stories to life through the power of animation. I have a passion for creating engaging, entertaining, and visually stunning animations that captivate audiences of all ages.</p>
+                <p>My skills in animation are backed by years of experience and education. I hold a degree in animation and have worked on a variety of projects, from short films and commercials to TV shows and feature films. I have expertise in traditional 2D animation as well as 3D animation and computer graphics.</p>
+            </div>
         </div>
+        <img class="photo2" src="photo.jpg"> <!-- 加入圖片-->
     </div>
     <div class="works">
         <div class="work-group">
